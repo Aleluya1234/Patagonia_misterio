@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Patagonia Misterios</title>
+</head>
+<body>
+  <header><h1>Patagonia Misterios</h1></header>
+  <nav>
+    <a href="{% url 'inicio' %}">Inicio</a> |
+    <a href="{% url 'nosotros' %}">Nosotros</a> |
+    <a href="{% url 'contacto' %}">Contacto</a> |
+    <a href="{% url 'catalogo' %}">Catálogo</a>
+  </nav>
+  <hr>
+  {% block content %}{% endblock %}
+  <hr>
+  <footer>© 2026 Patagonia Misterios</footer>
+</body>
+</html>
