@@ -1,9 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 <h2>Catálogo de Misterios</h2>
-<ul>
+<div class="catalogo">
   {% for item in misterios %}
-    <li><strong>{{ item.titulo }}</strong>: {{ item.descripcion }}</li>
+    <div class="misterio-card">
+      <h3>{{ item.titulo }}</h3>
+      <p>{{ item.descripcion }}</p>
+    </div>
   {% endfor %}
-</ul>
+</div>
 {% endblock %}
