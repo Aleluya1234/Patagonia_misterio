@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
   <meta charset="UTF-8">
   <title>Patagonia Misterios</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-  <header><h1>Patagonia Misterios</h1></header>
+  <header>
+    <h1>Patagonia Misterios</h1>
+  </header>
+
   <nav>
     <a href="{% url 'inicio' %}">Inicio</a> |
     <a href="{% url 'nosotros' %}">Nosotros</a> |
     <a href="{% url 'contacto' %}">Contacto</a> |
     <a href="{% url 'catalogo' %}">Catálogo</a>
   </nav>
-  <hr>
-  {% block content %}{% endblock %}
-  <hr>
-  <footer>© 2026 Patagonia Misterios</footer>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    <p>© 2026 Patagonia Misterios</p>
+  </footer>
 </body>
 </html>
